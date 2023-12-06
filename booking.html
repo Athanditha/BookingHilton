@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+<link rel="manifest" href="./manifest.json">
+<link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#000000">
+    <link rel="stylesheet" href="./style.css">
+    <title>Booking</title>
+</head>
+<body>
+    <header id="header">
+        <!--Navigation Bar-->
+        <a href="./index.html"><img class="logo" src="./hilton white logo.png" alt="hilton logo" width="100px"></a>
+        <nav>
+            <ul class="navlinks">
+                <li><a href="./branches.html">Branches</a></li>
+                <li><a href="./adventures.html">Adventures</a></li>
+                <li><a href="./Restaurants.html">Restaurants</a></li>
+            </ul>
+        </nav>
+        <a class="book" a href="./booking.html" ><button>Bookings</button></a>
+        <section class="menubtn">
+            <input type="checkbox" role="button" aria-label="Display the menu" class="menu">
+        </section>
+        <section class="dropdown_menu">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./branches.html">Branches</a></li>
+            <li><a href="./adventures.html">Adventures</a></li>
+            <li><a href="./Restaurants.html">Restaurants</a></li>
+            <li><a class="book" a href="./booking.html" ><button>Bookings</button></a></li>
+        </section>
+   </header>
+
+
+<section class="bookbody">
+    <section class="booklandcon">
+        <section class="formbody">
+            <!--Form Head-->
+            <section class="bookhead">
+                <section class="headtext">
+                    <h2>Make Your Bookings</h2>
+                    <p>Reserve at Hilton!</p>
+                </section>  
+                <section class="funcbuttons">
+                    <section class="br">
+                        <section class="bc4">
+                    <button type="button" id="addfavorite">Add to Favourite</button>
+                        </section>
+                        <section class="bc4">
+                    <button type="button" id="openfavorite">Use Your Favourite Order</button>
+                        </section>
+                        <section class="bc1">
+                    <button type="button" value="loyalty" id="lopts">Loyalty</button>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <!--Form Body-->
+
+            <form class="bookmain" id="bookmain" action="#">
+                    <section class="br">
+                        <section class="bc1">
+                            <h3><label for="fname">First Name</label></h3>
+                            <input type="text" name="fname" id="fname" placeholder="Enter Your First Name"  >
+                        </section>
+                        <section class="bc1">
+                            <h3><label for="lname">Last Name</label></h3>
+                            <input type="text" name="lname" id="lname" placeholder="Enter Your Last Name"  >
+                        </section>
+                    </section>
+                    <section class="br">
+                        <section class="bc1">
+                            <h3><label for="email">E-Mail</label></h3>
+                            <input type="email" name="email" id="email" placeholder="Enter Your E-Mail"  >
+                        </section>
+                        <section class="bc1">
+                            <h3><label for="cno">Phone No.</label></h3>
+                            <input type="tel" name="cno" id="cno" placeholder="0712345678"  >
+                        </section>
+                    </section>
+                    <section class="br">
+                        <section class="bc1">
+                            <button type="button" value="RoomBooking" id="roomview" class="chooseform">
+                                Rooms
+                            </button>
+                        </section>
+                        <section class="bc1">
+                            <button type="button" value="AdventureBooking" class="chooseform" id="advview">
+                                Adventures
+                            </button>
+                        </section>
+                    </section>
+                    <section class="br">
+                        <section class="bc3">
+                            <button type="button" value="OverallBooking" class="chooseform" id="ovrview">
+                                <h3>OVERALL BOOKINGS</h3>
+                            </button>
+                        </section>
+                    </section>
+                    <section id="roomform">
+                        <section class="bookhead" id="sechead">
+                            <h4>Room Booking </h4>
+                            <button type="button" value="roomclose" id="roomclose" class="closebutton">x</button>
+                        </section>
+                        <form class="roombookmain" id="roombookmain" action="#">
+                            <section class="br">
+                                <section class="bc1">
+                                    <h3><label for="arrivaldate">Arrival Date</label></h3>
+                                    <input type="date" name="arrivaldate" id="ad"  >
+                                </section>
+                                <section class="bc1">
+                                    <h3><label for="departuredate">Departure Date</label></h3>
+                                    <input type="date" name="departuredate" id="dd">
+                                </section>
+                            </section>
+                            <section class="br">
+                                <section class="bc1">
+                                    <h3>No. of Adults</h3> 
+                                    <h6>above the age of 18</h6>   
+                                </section>
+                                    <section class="bc5">
+                                        <button type="button" id="adumin" class="pandm">-</button>
+                                    </section>
+                                    <section class="bc5">
+                                        <p id="aducount" class="roomcounts">0</p>
+                                    </section>
+                                    <section class="bc5">
+                                        <button type="button"  id="aduplus" class="pandm">+</button>
+                                    </section>
+                            </section>
+                            <section class="br">
+                                <section class="bc1">
+                                    <h3>No. of Children</h3> 
+                                    <h6>above the age of 5</h6>   
+                                </section>
+                                    <section class="bc5">
+                                        <button type ="button"  id="kidmin" class="pandm">-</button>
+                                    </section>
+                                    <section class="bc5">
+                                        <p id="kidcount" class="roomcounts">0</p>
+                                    </section>
+                                    <section class="bc5">
+                                        <button type ="button"  id="kidplus" class="pandm">+</button>
+                                    </section>
+                            </section>
+                            <section class="br">
+
+                                        <section class="bc3">
+                                            <h3><label for="promocode">Promo Code</label></h3>
+                                            <input type="text" name="promocode" id="procode" placeholder="Enter Promo Code Here">
+                                        </section>
+                                </section>
+                                
+                            <section class="br">
+                                <section class="bc3">
+                                    <h3>No. of Rooms</h3>    
+                                </section>
+                            </section>
+                            <section class="roomcatform">
+                            <section class="br" id="roomsect">
+                            <section class="bc1">
+                                <h5>Single</h5>
+                            </section>
+                            <section class="bc5">
+                                <button type ="button" id="rsmin" class="pandm">-</button>
+                            </section>
+                            <section class="bc5">
+                                <p id="rscount" class="roomcounts">0</p>
+                            </section>
+                            <section class="bc5">
+                                <button type ="button"  id="rsplus" class="pandm">+</button>
+                            </section>
+                            </section>
+                            <section class="br" id="roomsect">
+                                <section class="bc1">
+                                    <h5>Double</h5>
+                                </section>
+                                <section class="bc5">
+                                    <button type ="button"  id="rdminus" class="pandm">-</button>
+                                </section>
+                                <section class="bc5">
+                                    <p id="rdcount" class="roomcounts">0</p>
+                                </section>
+                                <section class="bc5">
+                                    <button type ="button"  id="rdplus" class="pandm">+</button>
+                                </section>
+                                </section>
+                            <section class="br" id="roomsect">
+                            <section class="bc1" >
+                                <h5>Triple</h5>
+                            </section>
+                            <section class="bc5">
+                                <button type ="button"  id="rtmin" class="pandm">-</button>
+                            </section>
+                            <section class="bc5">
+                                <p id="rtcount" class="roomcounts">0</p>
+                            </section>
+                            <section class="bc5">
+                                <button type ="button"  id="rtplus" class="pandm">+</button>
+                            </section>
+                            </section>
+                        </section>
+                        
+                            <section class="br">
+                                <section class="bc3" id="extrahead">
+                                    <h3>Extra Reqirements</h3>    
+                                </section>
+                            </section>
+                            
+                            <section class="br" id="extrasect">
+                                <section class="bc6">
+                                    Wi-Fi
+                                    <input type="checkbox" name="extra" id="Wi-Fi" value="wifi">
+                                </section>
+                                <section class="bc6">
+                                    Mini Bar
+                                    <input type="checkbox" name="extra" id="minibar" value="minibar">
+                                </section>
+                                <section class="bc6">
+                                    Extra Bed (per room)
+                                    <input type="checkbox" name="extra" id="bedding" value="bedding">
+                                </section>
+                            </section>
+                            <section class="br" id="tablerow">
+                                <section class="bc3"  id="summarytable">
+                                <table class="roomtable" id="currroom">
+                                    <tr>
+                                        <th>Name:</th>
+                                        <td colspan="3" id="fullnameroom"></td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="1">Branch</th>
+                                        <td colspan="3">Hilton</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="1">Arrival Date</th>
+                                        <td colspan="3" id="adtable"></td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="1" >Departure Date</th>
+                                        <td colspan="3" id="ddtable">0</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="1">Days</th>
+                                        <td colspan="3" id="daystable">0</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="1">No. of Adults</th>
+                                        <td colspan="3" id="adunotab">0</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="4">Room Pricing</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Room Type</th>
+                                        <th>Number</th>
+                                        <th>Price Per Item</th>
+                                        <th>Total Price</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Single Rooms</td>
+                                        <td id="rsnotab">0</td>
+                                        <td>LKR 25000.00</td>
+                                        <td id="rstot">0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Double Rooms</td>
+                                        <td id="rdnotab">0</td>
+                                        <td>LKR 35000.00</td>
+                                        <td id="rdtot">0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Triple Rooms</td>
+                                        <td id="rtnotab">0</td>
+                                        <td>LKR 40000.00</td>
+                                        <td id="rttot">0</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="3"> Total Room Price per day</th>
+                                        <td id="roomtot1daytable">0</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="3"> Total Room Price</th>
+                                        <td id="roomtottable">0</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="4">Kids Pricings</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Kids Price Per Day </th>
+                                        <td id="kidnotab">0</td>
+                                        <td>LKR 5000.00</td>
+                                        <td id="kidtot1dayprice">0</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="3">Total Kids Amount</th>
+                                        <td id="kidtotprice">0</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="4">Misc. Pricings</th>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1">Wifi</td>
+                                        <td colspan="3" id="wifistattable">0</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1">Mini-Bar</td>
+                                        <td colspan="3" id="ministattable">0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Extra-Bedding  (per room)</td>
+                                        <td id="bedstattable">0</td>
+                                        <td id="bednumber"></td>
+                                        <td id="bedtotprice"></td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="3"> Discount</th>
+                                        <td id="discTable">0</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="3"> Overall Price</th>
+                                        <td id="roomfullpricetab">0</td>
+                                    </tr>
+                                    </table>
+                                    </section>
+                            </section>
+                            <section class="br">
+                                <section class="bc3">
+                                    <button type="submit" id="roombook">
+                                        Book Now
+                                    </button>
+                                </section>
+                            </section>
+                        </form>
+                    </section>
+                    <section id="advform">
+                        <section class="bookhead" id="sechead">
+                            <h4>Adventure Booking (Diving)</h4>
+                            <button type="button" value="advclose" id="advclose" class="closebutton">x</button>
+                        </section>
+                    <form class="advbookmain" action="#">
+                        <section class="br">
+                            <section class="bc3">
+                                <h3><label for="ethdrop">Ethnicity</label></h3>
+                                <select id="ethdrop" name="ethdrop">
+                                    <option value="nohot">Select your Ethnicity</option>
+                                    <option value="localeth">Sri Lankan</option>
+                                    <option value="foreigneth">Foreign</option>
+                                    </select>
+                            </section>
+                        </section>
+                        <section class="br" id="guidesec">
+                            <section class="bc3">
+                                Guidance For Adults
+                                <input type="checkbox" name="guideadv" id="aduadvguide" value="aduguide">
+                            </section>
+                            <section class="bc3">
+                                Guidance For Kids
+                                <input type="checkbox" name="guideadv" id="kidadvguide" value="kidguide">
+                            </section>
+                        </section>
+                        <section class="br">
+                            <section class="bc1">
+                                <h3>Duration</h3> 
+                                <h6>in hours</h6>   
+                            </section>
+                                <section class="bc5">
+                                    <button type="button"  id="hourmin" class="pandm">-</button>
+                                </section>
+                                <section class="bc5">
+                                    <p id="hourcount" class="roomcounts">0</p>
+                                </section>
+                                <section class="bc5">
+                                    <button type="button"  id="hourplus" class="pandm">+</button>
+                                </section>
+                        </section>
+                        <section class="br">
+                            <section class="bc1">
+                                <h3>No. of Adults</h3> 
+                                <h6>above the age of 18</h6>   
+                            </section>
+                                <section class="bc5">
+                                    <button type="button" id="aduadvmin" class="pandm">-</button>
+                                </section>
+                                <section class="bc5">
+                                    <p id="aduadvcount" class="roomcounts">0</p>
+                                </section>
+                                <section class="bc5">
+                                    <button type="button"  id="aduadvplus" class="pandm">+</button>
+                                </section>
+                        </section>
+                        <section class="br">
+                            <section class="bc1">
+                                <h3>No. of Children</h3> 
+                                <h6>above the age of 5</h6>   
+                            </section>
+                                <section class="bc5">
+                                    <button type="button"  id="kidadvmin" class="pandm">-</button>
+                                </section>
+                                <section class="bc5">
+                                    <p id="kidadvcount" class="roomcounts">0</p>
+                                </section>
+                                <section class="bc5">
+                                    <button type="button"  id="kidadvplus" class="pandm">+</button>
+                                </section>
+                        </section>
+                            
+                        <section class="br" id="tablerow">
+                            <section class="bc3"  id="summarytable">
+                                <table class="roomtable" id="curradv">
+                                    <tr>
+                                        <th>Name:</th>
+                                        <td colspan="3" id="fullnameadv"></td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="1">Ethnicity</th>
+                                        <td colspan="3" id="ethtable"></td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="1">Duration(hours)</th>
+                                        <td colspan="3" id="hrtable">0</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="4">Adventure Pricing</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Category</th>
+                                        <th>Number</th>
+                                        <th>Price Per Person</th>
+                                        <th>Total Price</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Adults</td>
+                                        <td id="aduadvcounttable">0</td>
+                                        <td id="aduadvpricingtable">0</td>
+                                        <td id="aduadvpp">0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Children</td>
+                                        <td id="kidadvtablecount">0</td>
+                                        <td id="kidadvpricingtable">0</td>
+                                        <td id="kidadvpp">0</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="3"> Total Person Price</th>
+                                        <td id="totpersprice">0</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="4">Guidance Pricings</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Adults</th>
+                                        <td id="aduguidancestat">
+                                            No
+                                        </td>
+                                        <td>LKR 1000.00</td>
+                                        <td id="totguideadu"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Kids</th>
+                                        <td id="kidguidancestat">
+                                            No
+                                        </td>
+                                        <td>LKR 500.00</td>
+                                        <td id="totguidekid"></td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="3"> Overall Adventure Price</th>
+                                        <td id="totadvpricing">0</td>
+                                    </tr>
+                                    </table>
+                            </section>
+                        </section>
+                        <section class="br">
+                            <section class="bc3">
+                                <button type="submit"id="advbooksubmit">
+                                    Book Adventure
+                                </button>
+                            </section>
+                        </section>
+                    </section>
+                    <section id="ovrform">
+                        <section class="bookhead" id="sechead">
+                            <h4>Overall Bookings</h4>
+                            <button type="button" value="ovrclose" id="ovrclose" class="closebutton">x</button>
+                        </section>   
+                        <section class="br" id="tablerow">
+                            <section class="bc3"  id="summarytable">
+                                <table class="roomtable">
+                                    <tr>
+                                        <th colspan="4">Room Bookings</th>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">Single Rooms</td>
+                                        <td colspan="2" id="rsovrcount"></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">Double Rooms</td>
+                                        <td colspan="2" id="rdovrcount"></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">Triple Rooms</td>
+                                        <td colspan="2" id="rtovrcount"></td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="3">Total Rooms</td>
+                                        <th colspan="2" id="roomovrcount"></td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="3">Total Price</td>
+                                        <th colspan="2" id="totalovrprice"></td>
+                                    </tr>
+                                    
+                                    </table>
+                            </section>
+                        </section>
+                    </section>
+                    </section>
+                </form>
+        </section>   
+    </section> 
+</section>
+   <footer>
+    <!--footer section-->
+    <section class="row">
+        <section class="col">
+            <img src="./hilton white logo.png" alt="logo of hilton" class="footlogo">
+            <p>Hilton is a chain of hotels reknowed worldwide for providing a luxurious experience for it's vacators as well as offering many unforgettable functions and adventures around the world.</p>
+        </section>
+        <section class="col">
+            <h3>Global Headquarters<section class="underline" id="glound"><span></span></section></h3>
+            
+            <p>7930 Jones Branch Drive</p>
+            <p>McLean, Virginia 22102</p>
+            <p>USA</p>
+            <p>+1-800-HILTONS</p>
+            <H4 class="email-id">info@hilton.com</H4>
+        </section>
+        <section class="col">
+            <h3>Links<section class="underline"><span></span></section></h3>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./branches.html">Branches</a></li>
+                <li><a href="./adventures.html">Adventures</a></li>
+                <li><a href="./Restaurants.html">Restaurants</a></li>
+                <li><a href="./booking.html">Bookings</a></li>
+            </ul>
+        </section>
+    </section>
+    <hr>
+    <p class="copyright">Hilton © 2023 - Athanditha Nawarathna - All Rights Reserved</p>
+    <!--Image were taken from Pexels and Official Hilton Website-->
+    <!--Content was taken and rephrased from www.hilton.com/en/ & https://www.hiltoncolombo1.com/ -->
+</footer>
+<script src="./main.js"></script>
+</body>
+</html>
